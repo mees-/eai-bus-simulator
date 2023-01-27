@@ -39,11 +39,15 @@ variablee ook echt van dat type is. Ook is het niet handig om variabelenamen die
 slechts 1 karakter van elkaar verschillen, ze moeten distinct zijn.
 
 Ook is het ontzettend onhandig om zelfbedachte woorden te geven aan variabelen
-die niet duidelijk aangeven wat een variabele is en doet.
+die niet duidelijk aangeven wat een variabele is en doet. Een opmering is om de
+namen in het programma allemaal standaard in het engels te houden. Dit zodat er
+consistentie is in het taalgebruik. In enkele bestanden, te weten
+`InfoBordSysteem/infoborden/berichten.java` en de gehele map `tijdtools` wordt
+er gebruik gemaakt van nederlands terwijl de rest van het programma allemaal wel
+in het engels is geschreven.
 
-Door de hele applicatie heen zijn de functienamen wel goed benoemd.
-
-Er zijn bijna geen comments behalve als iets voor java FX wordt gebruikt.
+Er zijn bijna geen comments behalve als iets voor java FX wordt gebruikt, maar
+gezien de code redelijk doorleesbaar en mokkelijsk te beg
 
 ## functions
 
@@ -197,15 +201,15 @@ De class ziet er als volgt uit:
 
 ```java
 public class ETA {
-	String halteNaam;
-	int richting;
-	int aankomsttijd;
+  String halteNaam;
+  int richting;
+  int aankomsttijd;
 
-	ETA(String halteNaam, int richting, int aankomsttijd){
-		this.halteNaam=halteNaam;
-		this.richting=richting;
-		this.aankomsttijd=aankomsttijd;
-	}
+  ETA(String halteNaam, int richting, int aankomsttijd){
+    this.halteNaam=halteNaam;
+    this.richting=richting;
+    this.aankomsttijd=aankomsttijd;
+  }
 }
 ```
 
@@ -220,21 +224,21 @@ package mockDatabaseLogger;
 import java.util.ArrayList;
 
 public class Bericht {
-	String lijnNaam;
-	String eindpunt;
-	String bedrijf;
-	String busID;
-	int tijd;
-	ArrayList<ETA> ETAs;
+  String lijnNaam;
+  String eindpunt;
+  String bedrijf;
+  String busID;
+  int tijd;
+  ArrayList<ETA> ETAs;
 
-	Bericht(String lijnNaam, String bedrijf, String busID, int tijd){
-		this.lijnNaam=lijnNaam;
-		this.bedrijf=bedrijf;
-		this.eindpunt="";
-		this.busID=busID;
-		this.tijd=tijd;
-		this.ETAs=new ArrayList<ETA>();
-	}
+  Bericht(String lijnNaam, String bedrijf, String busID, int tijd){
+    this.lijnNaam=lijnNaam;
+    this.bedrijf=bedrijf;
+    this.eindpunt="";
+    this.busID=busID;
+    this.tijd=tijd;
+    this.ETAs=new ArrayList<ETA>();
+  }
 }
 ```
 
@@ -246,89 +250,89 @@ Deze ziet er als volgt uit:
 
 ```java
 public class JSONBericht {
-	private int tijd;
-	private int aankomsttijd;
-	private String lijnNaam;
-	private String busID;
-	private String bedrijf;
-	private String eindpunt;
+  private int tijd;
+  private int aankomsttijd;
+  private String lijnNaam;
+  private String busID;
+  private String bedrijf;
+  private String eindpunt;
 
-	public JSONBericht(int tijd, int aankomsttijd, String lijnNaam, String busID, String bedrijf, String eindpunt) {
-		super();
-		this.tijd = tijd;
-		this.aankomsttijd = aankomsttijd;
-		this.lijnNaam = lijnNaam;
-		this.busID = busID;
-		this.bedrijf = bedrijf;
-		this.eindpunt = eindpunt;
-	}
+  public JSONBericht(int tijd, int aankomsttijd, String lijnNaam, String busID, String bedrijf, String eindpunt) {
+    super();
+    this.tijd = tijd;
+    this.aankomsttijd = aankomsttijd;
+    this.lijnNaam = lijnNaam;
+    this.busID = busID;
+    this.bedrijf = bedrijf;
+    this.eindpunt = eindpunt;
+  }
 
-	public JSONBericht() {
+  public JSONBericht() {
 
-	}
+  }
 
-	public int getTijd() {
-		return tijd;
-	}
+  public int getTijd() {
+    return tijd;
+  }
 
-	public void setTijd(int tijd) {
-		this.tijd = tijd;
-	}
+  public void setTijd(int tijd) {
+    this.tijd = tijd;
+  }
 
-	public int getAankomsttijd() {
-		return aankomsttijd;
-	}
+  public int getAankomsttijd() {
+    return aankomsttijd;
+  }
 
-	public void setAankomsttijd(int aankomsttijd) {
-		this.aankomsttijd = aankomsttijd;
-	}
+  public void setAankomsttijd(int aankomsttijd) {
+    this.aankomsttijd = aankomsttijd;
+  }
 
-	public String getLijnNaam() {
-		return lijnNaam;
-	}
+  public String getLijnNaam() {
+    return lijnNaam;
+  }
 
-	public void setLijnNaam(String lijnNaam) {
-		this.lijnNaam = lijnNaam;
-	}
+  public void setLijnNaam(String lijnNaam) {
+    this.lijnNaam = lijnNaam;
+  }
 
-	public String getBusID() {
-		return busID;
-	}
+  public String getBusID() {
+    return busID;
+  }
 
-	public void setBusID(String busID) {
-		this.busID = busID;
-	}
+  public void setBusID(String busID) {
+    this.busID = busID;
+  }
 
-	public String getBedrijf() {
-		return bedrijf;
-	}
+  public String getBedrijf() {
+    return bedrijf;
+  }
 
-	public void setBedrijf(String bedrijf) {
-		this.bedrijf = bedrijf;
-	}
+  public void setBedrijf(String bedrijf) {
+    this.bedrijf = bedrijf;
+  }
 
-	public String getEindpunt() {
-		return eindpunt;
-	}
+  public String getEindpunt() {
+    return eindpunt;
+  }
 
-	public void setEindpunt(String eindpunt) {
-		this.eindpunt = eindpunt;
-	}
+  public void setEindpunt(String eindpunt) {
+    this.eindpunt = eindpunt;
+  }
 
-	public String getInfoRegel() {
-		// Code voor opdracht 3:
-		// InfobordTijdFuncties tijdFuncties = new InfobordTijdFuncties();
-		// String tijd = tijdFuncties.getFormattedTimeFromCounter(aankomsttijd);
-		String tijd = "" + aankomsttijd;
-		String regel = String.format("%8s - %5s - %12s", this.lijnNaam, this.eindpunt, tijd);
-		return regel;
-	}
+  public String getInfoRegel() {
+    // Code voor opdracht 3:
+    // InfobordTijdFuncties tijdFuncties = new InfobordTijdFuncties();
+    // String tijd = tijdFuncties.getFormattedTimeFromCounter(aankomsttijd);
+    String tijd = "" + aankomsttijd;
+    String regel = String.format("%8s - %5s - %12s", this.lijnNaam, this.eindpunt, tijd);
+    return regel;
+  }
 
-	@Override
-	public String toString() {
-		return "JSONBericht [tijd=" + tijd + ", aankomsttijd=" + aankomsttijd + ", lijnNaam=" + lijnNaam + ", busID="
-				+ busID + ", bedrijf=" + bedrijf + ", eindpunt=" + eindpunt + "]";
-	}
+  @Override
+  public String toString() {
+    return "JSONBericht [tijd=" + tijd + ", aankomsttijd=" + aankomsttijd + ", lijnNaam=" + lijnNaam + ", busID="
+        + busID + ", bedrijf=" + bedrijf + ", eindpunt=" + eindpunt + "]";
+  }
 }
 ```
 
@@ -483,113 +487,113 @@ De bus class ziet er als volgt uit:
 ```java
 public class Bus {
 
-	private Bedrijven bedrijf;
-	private Lijnen lijn;
-	private int halteNummer;
-	private int totVolgendeHalte;
-	private int richting;
-	private boolean bijHalte;
-	private String busID;
+  private Bedrijven bedrijf;
+  private Lijnen lijn;
+  private int halteNummer;
+  private int totVolgendeHalte;
+  private int richting;
+  private boolean bijHalte;
+  private String busID;
 
-	Bus(Lijnen lijn, Bedrijven bedrijf, int richting) {
-		this.lijn = lijn;
-		this.bedrijf = bedrijf;
-		this.richting = richting;
-		this.halteNummer = -1;
-		this.totVolgendeHalte = 0;
-		this.bijHalte = false;
-		this.busID = "Niet gestart";
-	}
+  Bus(Lijnen lijn, Bedrijven bedrijf, int richting) {
+    this.lijn = lijn;
+    this.bedrijf = bedrijf;
+    this.richting = richting;
+    this.halteNummer = -1;
+    this.totVolgendeHalte = 0;
+    this.bijHalte = false;
+    this.busID = "Niet gestart";
+  }
 
-	public void setbusID(int starttijd) {
-		this.busID = starttijd + lijn.name() + richting;
-	}
+  public void setbusID(int starttijd) {
+    this.busID = starttijd + lijn.name() + richting;
+  }
 
-	public void naarVolgendeHalte() {
-		Positie volgendeHalte = lijn.getHalte(halteNummer + richting).getPositie();
-		totVolgendeHalte = lijn.getHalte(halteNummer).afstand(volgendeHalte);
-	}
+  public void naarVolgendeHalte() {
+    Positie volgendeHalte = lijn.getHalte(halteNummer + richting).getPositie();
+    totVolgendeHalte = lijn.getHalte(halteNummer).afstand(volgendeHalte);
+  }
 
-	public boolean halteBereikt() {
-		halteNummer += richting;
-		bijHalte = true;
-		if ((halteNummer >= lijn.getLengte() - 1) || (halteNummer == 0)) {
-			System.out.printf("Bus %s heeft eindpunt (halte %s, richting %d) bereikt.%n",
-					lijn.name(), lijn.getHalte(halteNummer), lijn.getRichting(halteNummer) * richting);
-			return true;
-		} else {
-			System.out.printf("Bus %s heeft halte %s, richting %d bereikt.%n",
-					lijn.name(), lijn.getHalte(halteNummer), lijn.getRichting(halteNummer) * richting);
-			naarVolgendeHalte();
-		}
-		return false;
-	}
+  public boolean halteBereikt() {
+    halteNummer += richting;
+    bijHalte = true;
+    if ((halteNummer >= lijn.getLengte() - 1) || (halteNummer == 0)) {
+      System.out.printf("Bus %s heeft eindpunt (halte %s, richting %d) bereikt.%n",
+          lijn.name(), lijn.getHalte(halteNummer), lijn.getRichting(halteNummer) * richting);
+      return true;
+    } else {
+      System.out.printf("Bus %s heeft halte %s, richting %d bereikt.%n",
+          lijn.name(), lijn.getHalte(halteNummer), lijn.getRichting(halteNummer) * richting);
+      naarVolgendeHalte();
+    }
+    return false;
+  }
 
-	public void start() {
-		halteNummer = (richting == 1) ? 0 : lijn.getLengte() - 1;
-		System.out.printf("Bus %s is vertrokken van halte %s in richting %d.%n",
-				lijn.name(), lijn.getHalte(halteNummer), lijn.getRichting(halteNummer) * richting);
-		naarVolgendeHalte();
-	}
+  public void start() {
+    halteNummer = (richting == 1) ? 0 : lijn.getLengte() - 1;
+    System.out.printf("Bus %s is vertrokken van halte %s in richting %d.%n",
+        lijn.name(), lijn.getHalte(halteNummer), lijn.getRichting(halteNummer) * richting);
+    naarVolgendeHalte();
+  }
 
-	public boolean move() {
-		boolean eindpuntBereikt = false;
-		bijHalte = false;
-		if (halteNummer == -1) {
-			start();
-		} else {
-			totVolgendeHalte--;
-			if (totVolgendeHalte == 0) {
-				eindpuntBereikt = halteBereikt();
-			}
-		}
-		return eindpuntBereikt;
-	}
+  public boolean move() {
+    boolean eindpuntBereikt = false;
+    bijHalte = false;
+    if (halteNummer == -1) {
+      start();
+    } else {
+      totVolgendeHalte--;
+      if (totVolgendeHalte == 0) {
+        eindpuntBereikt = halteBereikt();
+      }
+    }
+    return eindpuntBereikt;
+  }
 
-	public void sendETAs(int nu) {
-		int i = 0;
-		Bericht bericht = new Bericht(lijn.name(), bedrijf.name(), busID, nu);
-		if (bijHalte) {
-			ETA eta = new ETA(lijn.getHalte(halteNummer).name(), lijn.getRichting(halteNummer) * richting, 0);
-			bericht.ETAs.add(eta);
-		}
-		Positie eerstVolgende = lijn.getHalte(halteNummer + richting).getPositie();
-		int tijdNaarHalte = totVolgendeHalte + nu;
-		for (i = halteNummer + richting; !(i >= lijn.getLengte()) && !(i < 0); i = i + richting) {
-			tijdNaarHalte += lijn.getHalte(i).afstand(eerstVolgende);
-			ETA eta = new ETA(lijn.getHalte(i).name(), lijn.getRichting(i) * richting, tijdNaarHalte);
-			// System.out.println(bericht.lijnNaam + " naar halte" + eta.halteNaam + " t=" +
-			// tijdNaarHalte);
-			bericht.ETAs.add(eta);
-			eerstVolgende = lijn.getHalte(i).getPositie();
-		}
-		bericht.eindpunt = lijn.getHalte(i - richting).name();
-		sendBericht(bericht);
-	}
+  public void sendETAs(int nu) {
+    int i = 0;
+    Bericht bericht = new Bericht(lijn.name(), bedrijf.name(), busID, nu);
+    if (bijHalte) {
+      ETA eta = new ETA(lijn.getHalte(halteNummer).name(), lijn.getRichting(halteNummer) * richting, 0);
+      bericht.ETAs.add(eta);
+    }
+    Positie eerstVolgende = lijn.getHalte(halteNummer + richting).getPositie();
+    int tijdNaarHalte = totVolgendeHalte + nu;
+    for (i = halteNummer + richting; !(i >= lijn.getLengte()) && !(i < 0); i = i + richting) {
+      tijdNaarHalte += lijn.getHalte(i).afstand(eerstVolgende);
+      ETA eta = new ETA(lijn.getHalte(i).name(), lijn.getRichting(i) * richting, tijdNaarHalte);
+      // System.out.println(bericht.lijnNaam + " naar halte" + eta.halteNaam + " t=" +
+      // tijdNaarHalte);
+      bericht.ETAs.add(eta);
+      eerstVolgende = lijn.getHalte(i).getPositie();
+    }
+    bericht.eindpunt = lijn.getHalte(i - richting).name();
+    sendBericht(bericht);
+  }
 
-	public void sendLastETA(int nu) {
-		Bericht bericht = new Bericht(lijn.name(), bedrijf.name(), busID, nu);
-		String eindpunt = lijn.getHalte(halteNummer).name();
-		ETA eta = new ETA(eindpunt, lijn.getRichting(halteNummer) * richting, 0);
-		bericht.ETAs.add(eta);
-		bericht.eindpunt = eindpunt;
-		sendBericht(bericht);
-	}
+  public void sendLastETA(int nu) {
+    Bericht bericht = new Bericht(lijn.name(), bedrijf.name(), busID, nu);
+    String eindpunt = lijn.getHalte(halteNummer).name();
+    ETA eta = new ETA(eindpunt, lijn.getRichting(halteNummer) * richting, 0);
+    bericht.ETAs.add(eta);
+    bericht.eindpunt = eindpunt;
+    sendBericht(bericht);
+  }
 
-	public void sendBericht(Bericht bericht) {
-		XStream xstream = new XStream();
-		xstream.alias("bus", Bus.class);
-		xstream.alias("bericht", Bericht.class);
-		xstream.alias("eta", ETA.class);
-		xstream.alias("lijn", Lijnen.class);
-		xstream.alias("bedrijf", Bedrijven.class);
-		xstream.alias("halte", Halte.class);
-		xstream.alias("positie", Positie.class);
+  public void sendBericht(Bericht bericht) {
+    XStream xstream = new XStream();
+    xstream.alias("bus", Bus.class);
+    xstream.alias("bericht", Bericht.class);
+    xstream.alias("eta", ETA.class);
+    xstream.alias("lijn", Lijnen.class);
+    xstream.alias("bedrijf", Bedrijven.class);
+    xstream.alias("halte", Halte.class);
+    xstream.alias("positie", Positie.class);
 
-		String xml = xstream.toXML(bericht);
-		Producer producer = new Producer();
-		producer.sendBericht(xml);
-	}
+    String xml = xstream.toXML(bericht);
+    Producer producer = new Producer();
+    producer.sendBericht(xml);
+  }
 }
 ```
 
@@ -671,3 +675,89 @@ private static int startBussen(int tijd){
     return (!busStart.isEmpty()) ? Collections.min(busStart.keySet()) : -1;
 }
 ```
+
+Deze methode zorgt ervoor dat alle bussen toegevoegd worden aan de lijst
+actieveBussen (command), en returnt een waarde (query). Een betere variant
+hiervan zou zijn om deze methode in twee te splitsen:
+
+```java
+private static void startBussen(int tijd) {
+  for (Bus bus : busStart.get(tijd)){
+        actieveBussen.add(bus);
+    }
+    busStart.remove(tijd);
+}
+private static int getNextTime() {
+  return (!busStart.isEmpty()) ? Collections.min(busStart.keySet()) : -1;
+}
+```
+
+Op deze manier zijn de command en query acties van elkaar gescheiden.
+
+### Check en update
+
+In de methode `infoborden.Berichten.checkRepaint` wordt ook het command-query
+principe geschonden. Hier wordt gecontroleerd of de user-interface ververst moet
+worden door een hash op te bouwen en deze te vergelijken met een opgeslagen
+hash. Dit is het query gedeelte. Het command gedeelte is het veranderen van de
+opgeslagen hash wanneer deze invalide is. Dit zou door een andere methode moeten
+worden gedaan.  
+De code voor deze functie ziet er als volgt uit.
+
+```java
+private boolean checkRepaint(int aantalRegels, int[] aankomsttijden) {
+  int totaalTijden = 0;
+  for (int i = 0; i < aantalRegels; i++) {
+    totaalTijden += aankomsttijden[i];
+  }
+  if (hashValue != totaalTijden) {
+    hashValue = totaalTijden;
+    return true;
+  }
+  return false;
+}
+```
+
+Een betere manier om dit uit te voeren zou kunnen zijn om een nieuwe class te
+schrijven die de verantwoordelijkheid draagt om bij te houden wanneer het scherm
+ververst moet worden:
+
+```java
+
+class RefreshChecker {
+  private int currentStatusHash;
+  private bool mustRefresh = false;
+
+  public RefreshChecker(int[] initialAankomstTijden) {
+    updateHash(initialAankomstTijden);
+  }
+
+  public bool getMustRefresh() {
+    return mustRefresh;
+  }
+
+  public void indicateRefreshDone() {
+    mustRefresh = false;
+  }
+
+  public void updateHash(int[] aankomstTijden) {
+    int newHash = calculateHash(aankomstTijden);
+    if (newHash != currentStatusHash) {
+      mustRefresh = true;
+    }
+    currentStatusHash = hash;
+  }
+
+  private int calculateHash(int[] data) {
+    int hash = 0;
+    for (int dataPoint : data) {
+      hash += dataPoint;
+    }
+    return hash;
+  }
+}
+```
+
+In dit voorbeeld haal je zowel de verantwoordelijkheid voor het bijhouden van
+waneer een refresh nodig is uit de class als dat je de command-query scheiding
+netjes maakt. De methode `indicateRefreshDone` vervangt het updaten van de hash.
