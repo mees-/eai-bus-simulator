@@ -14,17 +14,16 @@ import org.apache.activemq.ActiveMQConnectionFactory;
 public class ListenerStarter implements Runnable, ExceptionListener {
 	private String selector = "";
 	private Infobord infobord;
-	private Berichten berichten;
 
 	private static String subject = "bus-updates-json";
 
 	public ListenerStarter() {
 	}
 
-	public ListenerStarter(String selector, Infobord infobord, Berichten berichten) {
+	public ListenerStarter(String selector, Infobord infobord) {
 		this.selector = selector;
 		this.infobord = infobord;
-		this.berichten = berichten;
+		this.berichten = infobord.berichten();
 	}
 
 	public void run() {
@@ -42,7 +41,7 @@ public class ListenerStarter implements Runnable, ExceptionListener {
 			MessageConsumer consumer = session.createConsumer(dest, selector);
 			System.out.println("Produce, wait, consume " + selector);
 
-			MessageListener listener = new QueueListener(selector, infobord, berichten);
+			MessageListener listener = new QueueListener(selector, infobord, infobord.berichten());
 			consumer.setMessageListener(listener);
 		} catch (
 
