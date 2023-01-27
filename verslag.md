@@ -9,8 +9,8 @@
 
 Over naamgeving wordt het volgende beschreven: Namen eten de intentie van iets
 benoemen. Bijvoorbeeld bij een variabele die een bepaalde tijdunit vasthoud moet
-duidelijk maken wat de tijdunit is, zijn het secondes,minuten uren dagen weken
-maanden jaren. Dit principe werkt ook door bij variabelen verder namen geven,
+duidelijk maken wat de tijdunit is, zijn het secondes,minuten, uren, dagen, weken,
+maanden, jaren. Dit principe werkt ook door bij variabelen verder namen geven,
 het is af te raden om op deze manier variabelen te benoemen:
 
 ```java
@@ -29,7 +29,7 @@ int weeksSinceFailedExam;
 int daysSinceLastMentalBreakdown;
 ```
 
-Ook is het handig om bij functies geen gebruik tem aken van magic numbers, maar
+Ook is het handig om bij functies geen gebruik te maken van magic numbers, maar
 deze zowaar mogelijk in een leesbare functie te veranderen, bijvoorbeeld als bij
 een bepaald getal een status moet veranderen.
 
@@ -42,12 +42,14 @@ Ook is het ontzettend onhandig om zelfbedachte woorden te geven aan variabelen
 die niet duidelijk aangeven wat een variabele is en doet. Een opmering is om de
 namen in het programma allemaal standaard in het engels te houden. Dit zodat er
 consistentie is in het taalgebruik. In enkele bestanden, te weten
-`InfoBordSysteem/infoborden/berichten.java` en de gehele map `tijdtools` wordt
+`InfoBordSysteem/infoborden/berichten.java` en de gehele mappen `tijdtools` en `simulator` wordt
 er gebruik gemaakt van nederlands terwijl de rest van het programma allemaal wel
 in het engels is geschreven.
 
+Voor de rest worden de variabelenamen wél goed toegepast.
+
 Er zijn bijna geen comments behalve als iets voor java FX wordt gebruikt, maar
-gezien de code redelijk doorleesbaar en mokkelijsk te beg
+gezien de code redelijk doorleesbaar en makkelijk te begrijpen is.
 
 ## functions
 
